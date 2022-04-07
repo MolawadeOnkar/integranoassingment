@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AssingmentEx.Models.User>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <table class="table table-bordered">
+        <tr>
+            <th>Employees</th>
+        </tr>
+        @foreach (var temp in Model)
+        {
+        <tr>
+            <td>
+                <a href="/Admin/details/@temp.UserId"> @temp.FirstName @temp.LastName</a>
+            </td>
+        </tr>
+        }
+    </table>
+</body>
+</html>
